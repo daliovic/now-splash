@@ -81,7 +81,7 @@ export const NowLogo = () => {
           width: 700,
           height: "auto",
           overflow: "visible",
-          filter: `drop-shadow(0 0 ${glowPulse * 30}px rgba(45, 101, 228, ${glowPulse}))`,
+          filter: `drop-shadow(0 0 ${glowPulse * 20}px rgba(45, 101, 228, ${glowPulse * 0.6}))`,
         }}
       >
         <defs>

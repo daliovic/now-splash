@@ -12,11 +12,11 @@ export const Background = () => {
     { extrapolateRight: "clamp" }
   );
 
-  // Fade from dark to slightly lighter
+  // Gentle lightness shift
   const bgLightness = interpolate(
     frame,
     [0, 1 * fps, 2 * fps],
-    [2, 6, 8],
+    [97, 98, 99],
     { extrapolateRight: "clamp" }
   );
 
@@ -33,7 +33,7 @@ export const Background = () => {
     const particleOpacity = interpolate(
       frame,
       [10 + i * 2, 20 + i * 2, durationInFrames - 20, durationInFrames],
-      [0, 0.3 + (i % 3) * 0.1, 0.3 + (i % 3) * 0.1, 0],
+      [0, 0.4 + (i % 3) * 0.15, 0.4 + (i % 3) * 0.15, 0],
       { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
     );
 
@@ -43,7 +43,7 @@ export const Background = () => {
   return (
     <AbsoluteFill
       style={{
-        background: `radial-gradient(circle at 50% 50%, hsl(224, 50%, ${bgLightness}%) 0%, hsl(224, 60%, ${bgLightness - 3}%) ${pulseRadius}%, #010208 100%)`,
+        background: `radial-gradient(circle at 50% 50%, hsl(224, 20%, ${bgLightness}%) 0%, hsl(224, 10%, ${bgLightness - 2}%) ${pulseRadius}%, #f5f6fa 100%)`,
       }}
     >
       {/* Floating particles */}
@@ -64,7 +64,7 @@ export const Background = () => {
               background: i % 3 === 0 ? "#f9a61c" : "#2d65e4",
               opacity,
               transform: `translate(${x}px, ${y}px)`,
-              boxShadow: `0 0 ${size * 3}px ${i % 3 === 0 ? "rgba(249, 166, 28, 0.5)" : "rgba(45, 101, 228, 0.5)"}`,
+              boxShadow: `0 0 ${size * 4}px ${i % 3 === 0 ? "rgba(249, 166, 28, 0.6)" : "rgba(45, 101, 228, 0.6)"}`,
             }}
           />
         ))}
