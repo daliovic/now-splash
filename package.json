@@ -7,23 +7,23 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.421",
+    "@remotion/lottie": "^4.0.421",
+    "@remotion/player": "4.0.421",
+    "lottie-web": "^5.13.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.421",
-    "zod": "3.22.3",
-    "@remotion/tailwind-v4": "4.0.421",
-    "tailwindcss": "4.0.0"
+    "zod": "3.22.3"
   },
   "devDependencies": {
-    "@remotion/eslint-config-flat": "4.0.421",
-    "prettier": "3.6.0",
-    "eslint": "9.19.0"
+    "@vitejs/plugin-react": "^4.3.0",
+    "vite": "^6.0.0"
   },
   "scripts": {
-    "dev": "remotion studio",
+    "dev": "vite --port 3000",
+    "studio": "remotion studio",
     "build": "remotion bundle",
-    "upgrade": "remotion upgrade",
-    "lint": "eslint src"
+    "upgrade": "remotion upgrade"
   },
   "sideEffects": [
     "*.css"
