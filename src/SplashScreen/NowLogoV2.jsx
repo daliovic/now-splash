@@ -92,7 +92,7 @@ export const NowLogoV2 = () => {
       {/* Flash overlay */}
       <AbsoluteFill
         style={{
-          background: `radial-gradient(circle at 50% 50%, rgba(249, 166, 28, ${flash}), transparent 70%)`,
+          background: `radial-gradient(circle at 50% 50%, rgba(45, 101, 228, ${flash * 0.3}), transparent 70%)`,
           pointerEvents: "none",
         }}
       />
