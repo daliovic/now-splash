@@ -5,6 +5,7 @@ import { SplashScreen } from "./SplashScreen";
 import { SplashScreenV2 } from "./SplashScreen/SplashScreenV2";
 import { SplashScreenV3 } from "./SplashScreen/SplashScreenV3";
 import { SplashScreenV4 } from "./SplashScreen/SplashScreenV4";
+import { SplashScreenV5 } from "./SplashScreen/SplashScreenV5";
 
 const Label = ({ children }) => (
   <h2
@@ -94,6 +95,21 @@ const App = () => {
         <Label>V4 — Line Draw</Label>
         <Player
           component={SplashScreenV4}
+          compositionWidth={1920}
+          compositionHeight={1080}
+          durationInFrames={120}
+          fps={30}
+          style={{ width: 960, height: 540, borderRadius: 8 }}
+          controls
+          autoPlay
+          loop
+        />
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+        <Label>V5 — Zoom Unveil</Label>
+        <Player
+          component={SplashScreenV5}
           compositionWidth={1920}
           compositionHeight={1080}
           durationInFrames={120}

@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "vite --port 3000",
     "studio": "remotion studio",
-    "build": "remotion bundle",
+    "build": "vite build",
     "upgrade": "remotion upgrade"
   },
   "sideEffects": [
